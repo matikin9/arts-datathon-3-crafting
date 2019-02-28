@@ -13,8 +13,7 @@ function getGoogleSheetData() {
     $.getJSON(url, function(data) {
        $.each(data.feed.entry, function(i, val) {
            var test = val.gsx$yourname.$t;
-           //var lat = val.gsx$lat.$t;
-           //var lng = val.gsx$lng.$t;
+
            $('#main').append(test + '<br>');
        });
        
