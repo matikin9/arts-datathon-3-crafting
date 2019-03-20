@@ -9,6 +9,8 @@ var mymap = L.map('map-display').setView([34.0522, -118.2437], 9);
 L.mapbox.styleLayer('mapbox://styles/matikin9/cim5bt1q100iy9jkpl7ff9d1h').addTo(mymap);
 var markers = [];
 
+// Warnings
+var warningString = '';
 
 $(function() {
    getGoogleSheetData();
@@ -29,13 +31,12 @@ function getGoogleSheetData() {
        $.each(data.feed.entry, function(i, val) {
            displayOnPage(val);
        });
-       
     });
+    
+    $('#main').append('<strong>Warnings: </strong><br>' + (warningString == '' ? 'No errors!' : warningString) + '<br><br>');
 }
 
-function displayOnPage(row) {
-    var displayString = '';
-    var errorString = '';
+function displayOnPage(row, warningString) {
     var name = row.gsx$name.$t;
     
     for (var i=1; i<5; i++) {
@@ -44,7 +45,7 @@ function displayOnPage(row) {
         var locationName = row['gsx$location' + i + 'name'].$t;
         
         if (lat == '' || lng == '') {
-            errorString += name + ' has no coordinates for Location ' + i + '.<br>';
+            warningString += name + ' has no coordinates for Location ' + i + '.<br>';
         } else {
             var $locationInfo = $("<div>", {
                "id": name.replace(/\s+/g, '') + i,
@@ -58,12 +59,7 @@ function displayOnPage(row) {
                 .addTo(mymap);
             
             markers.push(m);
-            
-            displayString += name + ' Location ' + i + ': ' + locationName + '<br>';
         }
     }
-    
-    $('#main').append('<strong>Errors: </strong><br>' + (errorString == '' ? 'No errors!' : errorString) + '<br><br>');
-    $('#main').append('<strong>Locations: </strong><br>' + (displayString == '' ? 'No locations!' : displayString) + '<br><br>');
 }
 
