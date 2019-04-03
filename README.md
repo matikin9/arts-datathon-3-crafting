@@ -3,6 +3,8 @@
 ## Visualizing Data Through Craft
 Arts Datathon 3.0 @ the LA Public Library
 April 3, 2019
+https://www.lacountyarts.org/
+
 
 Easy link to this page: http://bit.ly/craftdata2019
 
@@ -15,3 +17,6 @@ Live map of your LA places --> [Map!](https://matikin9.github.io/arts-datathon-3
 [Embroidery instructions](https://docs.google.com/document/d/1njRXcQIHlc67D0kbKgmjz_OvCteEQuYW8bi-IpWEUIY/edit?usp=sharing)
 
 
+Live Archiving!
+Email: artsdatathon@gmail.com
+Site: https://sites.google.com/view/artsdatathon2019
