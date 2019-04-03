@@ -37,6 +37,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 50px;
 }
 
+#main {
+    overflow-y: scroll;
+}
+
 @media (max-width:768px) {
     #map {
         position: absolute;
