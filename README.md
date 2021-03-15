@@ -20,3 +20,6 @@ Live map of your LA places --> [Map!](https://matikin9.github.io/arts-datathon-3
 Live Archiving!
 Email: artsdatathon@gmail.com
 Site: https://sites.google.com/view/artsdatathon2019
+
+Results:
+![20190403_160509](https://user-images.githubusercontent.com/1873072/111198826-403bd000-857d-11eb-9ef9-7111dbfeba04.jpg)
